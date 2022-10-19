@@ -4,7 +4,7 @@ import com.azouakan.mymsscbrewery.domain.Beer;
 import com.azouakan.mymsscbrewery.web.model.BeerDto;
 import org.mapstruct.Mapper;
 
-@Mapper
+@Mapper(uses = {DateMapper.class})
 public interface BeerMaper {
     BeerDto beerToBeerDto(Beer beer);
     Beer beerDtoToBeer(BeerDto beerDto);
